@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="FAVICONS/favicon1.png"/>
+    <link rel="stylesheet" type="text/css" href="CSS/vender.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+    <script src="JavaScript/carrucel.js"></script>
+    <script src="JavaScript/jquery-latest.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en venta en León</title>
+    <script>
+        $(document).ready(function(){
+        var altura = $('.menu').offset().top;
+        
+        $(window).on('scroll', function(){
+            if ( $(window).scrollTop() > altura ){
+                $('.menu').addClass('menu-fixed');
+            } else {
+                $('.menu').removeClass('menu-fixed');
+            }
+        });
+
+    });
+    </script>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
+         
+        $(document).ready(function() {
+            var numImages = 6;
+            if (numImages <= 3) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+         
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {
+                    current = current - 1;
+                } else {
+                    current = numImages - 3;
+                }
+         
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+         
+                return false;
+            });
+         
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+         
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+         
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 3) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+         
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+         
+                return false;
+            }); 
+         });
+        </script>
+</head>
+<body id="cuerpo">
+    <div class="contenedor2">
+        <img src="IMAGENES/edificio2.jpg" width="100%" height="200%" />
+        <div class="texto-encima">
+            <header class="header">
+                <div class="contenedor">
+                    <nav class="menu">
+                        <table align="center">
+                            <td>
+                                <img src="IMAGENES/Logo.png"/>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a title="Inicio" href="menu.html">Inicio</a></li>
+                                    <li><a title="Comprar" href="#">Comprar</a></li> 
+                                    <li><a title="Rentar" href="renta.html">Rentar</a></li>
+                                    <li><a title="Vender" href="vendermicasa.html">Vender</a></li>
+                                    <li><a title="Contacto" href="#">Contacto</a></li>
+                                    <li><a title="Blog" href="#">Blog</a></li>
+                                    <li><a title="Favoritos" href="#">Favoritos</a></li>
+                                </ul>
+                            </td>
+                        </table>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="centrado2">
+            <font color="white" size="8px">¿Quiere vender o rentar una propiedad?</font><br>
+            <font color="white" size="5px">Ya sea que esté listo para vender o buscando respuestas, nosotros lo guiaremos hacia la mejor decisión.</font>
+        </div>
+    </div>
+    <!--Seccion de formulario--> 
+
+<section class="section">
+    <p><font color="black" size="15px">Hable con un experto de la zona</font><br>
+        <font color="black" size="5px">Sabemos las dudas que puede tener, nosotros las resolvemos:</font></p>
+        <article id="espacio2"></article>
+        <font color="black" size="3px">Información de contacto</font></p>
+        <hr color="blue" size=2 width="850">
+    <form action="#" method="post">
+        <ul>
+         <li>
+           <label for="name"><font color="black" size="4px">Nombre completo: *</font></label><br>
+           <input type="text" id="name" name="user_name" />
+         </li>
+         <li>
+             <table align="center">
+                 <td>
+                    <label for="tel"><font color="black" size="4px">Telefono con lada: *</font></label><br>
+                    <input type="number" id="number" name="user_number" />
+                 </td>
+                 <td>
+                    <label for="mail"><font color="black" size="4px">Correo electrónico: *</font></label><br>
+                    <input type="email" id="mail" name="user_email" />
+                 </td>
+             </table>
+         </li>
+         <li>
+            <table align="center">
+                <td>
+                   <label for="tel"><font color="black" size="4px">Tipo de operación: *</font></label><br>
+                    <select>
+                        <option>Venta</option>
+                        <option>Renta</option>
+                    </select>
+                </td>
+                <td>
+                   <label for="mail"><font color="black" size="4px">Tipo de Inmueble: *</font></label><br>
+                   <input type="email" id="mail" name="user_email" value="casa, departamento,terreno" />
+                </td>
+            </table>
+        </li>
+         <li>
+            <label for="msg"><font color="black" size="4px">Información Adicional:</font></label><br>
+           <textarea id="msg" name="user_message">Ubicación, etc.</textarea>
+         </li>
+       </ul>
+       <br>
+       <input type="submit" value="Enviar ahora"/>
+    </form>
+</section>
+
+<article id="espacio2"></article>
+<!--Carrucel-->
+<section class="section">
+    <p>Del Blog</p>
+    <hr color="blue" size=5 width="850">
+    <article clas="articles">
+        <table width="50%" height="50%" align="center">
+            <td>
+                <article id="espacio5"></article>
+            </td>
+            <td>
+                <div id="carrusel">
+                    <a href="#" class="left-arrow"><img src="IMAGENES/izquierda.png" /></a>
+                    <a href="#" class="right-arrow"><img src="IMAGENES/derecha.png" /></a>
+                    <div class="carrusel">
+                        <div class="product" id="product_0">
+                            <img src="IMAGENES/blog1.jpg" width="195" height="100" />
+                            <h5>22 Feb 2022</h5>
+                            <p>Tips nuevos compradores e inquilinos.</p>
+                        </div>
+                        <div class="product" id="product_1">
+                            <img src="IMAGENES/blog2.jpg" width="195" height="100" />
+                            <h5>27 Ene 2022</h5>
+                            <p>Asesoría fiscal y legal inmobiliaria.</p>
+                        </div>
+                        <div class="product" id="product_2">
+                            <img src="IMAGENES/blog3.jpg" width="195" height="100" />
+                            <h5>06 Ene 2022</h5>
+                            <p>Proyectos inmobiliarios, Experiencia</p>
+                        </div>
+                        <div class="product" id="product_3">
+                            <img src="IMAGENES/blog4.jpg" width="195" height="100" />
+                            <h5>05 Ene 2022</h5>
+                            <p>Tips nuevos compradores e inquilinos</p>
+                        </div>
+                        <div class="product" id="product_4">
+                            <img src="IMAGENES/blog5.jpg" width="195" height="100" />
+                            <h5>28 Dic 2021</h5>
+                            <p>Reclutamiento</p>
+                        </div>
+                        <div class="product" id="product_5">
+                            <img src="IMAGENES/blog6.jpg" width="195" height="100" />
+                            <h5>22 Feb 2022</h5>
+                            <p>Consejos Inversión bienes raíces</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </table>
+    </article>
+</section>
+<!--Footer-->
+<article id="espacio2"></article>
+<hr color="black" size=1>
+<footer>
+    <section class="section">
+        <p>
+            <table>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td align="left">
+                    <font size="5px">Propiedades</font><br>
+                    Avalúos<br>
+                    Comprar<br>
+                    Propietarios<br>
+                    Rentar<br>
+                    Estancias cortas<br>
+                    Vender<br>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td align="left">
+                    <font size="5px">Recursos</font><br>
+                    Blog<br>
+                    Contacto<br>
+                    Aviso de Privacidad<br>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td align="left">
+                    <font size="5px">Redes Sociales</font><br>
+                    Facebook<br>
+                    Twitter<br>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td align="left">
+                    <font size="5px">Hogare Norte</font><br>
+                    José Ma. Cruz, Interior 15, Plaza del Bosque, C.P. 37178, León, Guanajuato<br>                       
+                    Teléfonos: (477) 293-7300 & (477) 390-0240<br>
+                    
+                    <font size="5px">Hogare Connect</font><br>
+                    Blvd. Campestre , Plaza Teocali, C.P. 37178, León, Guanajuato<br>                       
+                    Teléfono: (477) 390-0240<br>
+                </td>
+            </table>
+            <table>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article align="left" width="80%"><br>
+                        Hogare es una Inmobiliaria ubicada en León, Guanajuato. Contamos con casas y terrenos en venta o renta en las mejores zonas de la ciudad: Punta del Este, El Molino, Zona Norte.
+                        <br><br>
+                        Casas en venta usadas en Leon Gto, Casas en venta de particulares en Leon Gto, Casas en venta en Punta del Este Leon, Casas en venta en El Molino Leon Gto, Casas en venta nuevas <br>
+                        en Leon Gto, Inmobiliarias en Leon Gto, Casas en Fraccionamiento en Leon Gto.
+                    </article>
+                </td>
+            </table>
+            <article id="espacio2"></article>
+        </p> 
+    </section>
+</footer>
+       
+</body>
+</html>

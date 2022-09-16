@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="FAVICONS/favicon1.png"/>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+    <script src="JavaScript/estilos.js"></script>
+    <script src="JavaScript/jquery-latest.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renta y venta de casas en León</title>
+    <script>
+        $(document).ready(function(){
+        var altura = $('.menu').offset().top;
+        
+        $(window).on('scroll', function(){
+            if ( $(window).scrollTop() > altura ){
+                $('.menu').addClass('menu-fixed');
+            } else {
+                $('.menu').removeClass('menu-fixed');
+            }
+        });
+
+    });
+    </script>
+</head>
+<body id="cuerpo"> 
+    <div class="contenedor2">
+        <img src="IMAGENES/edificio.jpg" width="100%" height="200%" />
+        <div class="texto-encima">
+            <header class="header">
+                <div class="contenedor">
+                    <nav class="menu">
+                        <table align="center">
+                            <td>
+                                <img src="IMAGENES/Logo.png"/>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><a title="Inicio" href="menu.html">Inicio</a></li>
+                                    <li><a title="Comprar" href="#">Comprar</a></li> 
+                                    <li><a title="Rentar" href="renta.html">Rentar</a></li>
+                                    <li><a title="Vender" href="vendermicasa.html">Vender</a></li>
+                                    <li><a title="Contacto" href="#">Contacto</a></li>
+                                    <li><a title="Blog" href="#">Blog</a></li>
+                                    <li><a title="Favoritos" href="#">Favoritos</a></li>
+                                </ul>
+                            </td>
+                        </table>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="centrado">
+            <font color="white" size="11px">Renta y Venta de casas y terrenos en León, Guanajuato</font>
+            <form action="result.php" method="post" target="_blank">
+                <div class="field" id="searchform">
+                    <input type="text" id="searchterm" placeholder="Buscar propiedad en venta o renta" />
+                    <button type="button" id="search">Buscar</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+    <!--Seccion primera iconos-->
+    <section class="section">
+        <article id="espacio"></article>
+        <article class="articles">
+            <table width="50%" height="50%" align="center">
+                <td>
+                    <article class="article">
+                        <img class="circular--square" src="IMAGENES/casa.png"/>
+                        <p><font color="black" size="7px">Quiero vender<br></font>
+                            <font color="black" size="5px">Somos expertos en fijar precios y posicionar su propiedad para encontrar al mejor comprador.</font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <img class="circular--square" src="IMAGENES/lugare.png"/>
+                        <p><font color="black" size="7px">Quiero comprar o rentar<br></font>
+                            <font color="black" size="5px">Consulta nuestro inventario de propiedades en venta o renta y permítenos asesorarte para encontrar la mejor opción para ti.</font></p>
+                    </article>
+                </td>
+            </table>
+            <article id="espacio"></article>
+        </article>
+    </section>
+    <!--Seccion de inmuebles destacados-->
+    <section class="section">
+        <article id="espacio2"></article>
+        <img class="circular--square" src="IMAGENES/destacado.png"/>
+        <p><font color="black" size="11px" align="center">Inmuebles destacados</font>
+            <article id="espacio2"></article>
+        <!--Seccion 1-->
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/casa1.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 10,600 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa - Fraccionamiento Los Carcamos.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros: 143.96 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/casa2.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 30,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa Amueblada en renta Gran jardin leon gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 4</li>
+                                    <li>Metros: 0.89 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/casa3.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 9,200,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Hermosa Casa en Venta Fraccionamiento el Carmen por Blvd. la Luz León Gto.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros: 1,092.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+        <article id="espacio2"></article>
+        <!--Seccion 2-->
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/casa4.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 3,199,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Finca Venta Excelente Ubicación Amplio Terreno Ideal Proyectos Centro León Gto.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros:  709.50 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/casa5.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 649,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa en venta Fracc. EL ARBOL Zona Norte León Gto.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 1</li>
+                                    <li>Metros: 92.57 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/casa6.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 3,990,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa en Venta Jardín de las Acacias - Lomas de Gran Jardín</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 3</li>
+                                    <li>Metros: 300.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+        <!--Seccion 3-->
+        <article id="espacio2"></article>
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/casa7.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 780,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa en Venta Fraccionamiento Torremolinos Sobre Blvd. Delta.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 1</li>
+                                    <li>Metros: 93.20 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/casa8.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 8,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa en Renta - Fraccionamiento Cibeles</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros: 85.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/casa9.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 12,500 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Casa Nueva Renta El Mayorazgo priv. Santa Lucía, León, Gto.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros: 147.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+        <!--Seccion 4-->
+        <article id="espacio2"></article>
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/dep1.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 10,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento Nuevo en Renta La Alameda León Gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros:  70.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/dep2.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 4,200 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Renta Departamento ideal para personas que trabajan en puerto interior - Jardines del Rio</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 1</li>
+                                    <li>Metros: 55.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/dep3.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 5,300 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento Torre Orion Leon Gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 1</li>
+                                    <li>Metros: 70.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+        <!--Seccion 5-->
+        <article id="espacio2"></article>
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/dep4.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 6,500 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento Renta Amueblado Moderno 5 min Poliforum zona Sur León Gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 1</li>
+                                    <li>Metros:  75.50 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/dep5.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 3,160,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Preciosa Departamento Nueva en Venta en Residencial El Molino en Condominio XIV, León, Gto.</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 3</li>
+                                    <li>Metros: 531.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/dep6.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 6,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento en Renta amueblada en Country del Lago, León, Gto. zona norte</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 3</li>
+                                    <li>Metros: 75.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+        <!--seccion 6-->
+        <article id="espacio2"></article>
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Renta</p>
+                            <br>
+                            <img src="IMAGENES/dep7.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 5,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento Nuevo en Renta La Alameda León Gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros:  70.50 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/dep8.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 649,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento Torre Orion Leon Gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 2</li>
+                                    <li>Baños: 1</li>
+                                    <li>Metros: 92.57 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <p>Venta</p>
+                            <br>
+                            <img src="IMAGENES/dep9.jpg" width="200px" height="200px"/>
+                            <div class="texto2">$ 3,990,000 MXN</div>
+                        </div>
+                        <p><font color="black" size="4px">Departamento Nuevo en Venta La Alameda León Gto</font>
+                            <font color="black" size="4px"align="left">
+                                <ul>
+                                    <li>Habitaciones: 3</li>
+                                    <li>Baños: 2</li>
+                                    <li>Metros: 70.00 M2</li>
+                                </ul>
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+    </section>
+    <article id="espacio2"></article>
+    <article id="link">
+        <article align="center">
+            <a href="#" width="100px" height="100px" style="background-color: #4400ff;"><font color="White">Ver todas las propiedades</font></a>
+        </article>
+    </article>
+
+    <article id="espacio2"></article>
+    <article id="espacio2"></article>
+    <article id="espacio2"></article>
+    <article id="espacio2"></article>
+
+    <!--Seccion de comentarios del blog-->
+    <section class="section">
+        <img class="circular--square" src="IMAGENES/blog.png"/>
+        <p><font color="black" size="11px" align="center">Del Blog</font>
+            <article id="espacio2"></article>
+        <!--Seccion 1-->
+        <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <br>
+                            <img src="IMAGENES/blog1.jpg" width="200px" height="200px"/>
+                        </div>
+                        <p><font color="black" size="3px">22 Feb 2022</font><br>
+                            <font color="black" size="4px"align="left">
+                                Tips nuevos compradores e inquilinos.<br>Departamentos en Renta en León Gto
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <br>
+                            <img src="IMAGENES/blog2.jpg" width="200px" height="200px"/>
+                        </div>
+                        <p><font color="black" size="3px">27 Ene 2022</font><br>
+                            <font color="black" size="4px"align="left">
+                                Asesoría fiscal y legal inmobiliaria. <br>5 Tips para rentar tu casa
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <br>
+                            <img src="IMAGENES/blog3.jpg" width="200px" height="200px"/>
+                        </div>
+                        <p><font color="black" size="3px">06 Ene 2022</font>
+                            <font color="black" size="4px"align="left"><br>Proyectos inmobiliarios, Experiencia<br>Administradores de inmuebles
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>
+        <article id="espacio2"></article>
+         <!--Seccion 2-->
+         <article class="articles2">
+            <table width="80%" height="80%" align="center">
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <br>
+                            <img src="IMAGENES/blog4.jpg" width="200px" height="200px"/>
+                        </div>
+                        <p><font color="black" size="3px">05 Ene 2022</font>
+                            <font color="black" size="4px"align="left"><br>Tips nuevos compradores e inquilinos<br>Casas en Renta que Acepten Mascota en León Gto
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <br>
+                            <img src="IMAGENES/blog5.jpg" width="200px" height="200px"/>
+                        </div>
+                        <p><font color="black" size="3px">28 Dic 2021</font>
+                            <font color="black" size="4px"align="left"><br>
+                                Reclutamiento<br>Como dar un seguimiento Apropiado.
+                            </font></p>
+                    </article>
+                </td>
+                <td>
+                    <article id="espacio2"></article>
+                </td>
+                <td>
+                    <article class="article">
+                        <div class="caja">
+                            <br>
+                            <img src="IMAGENES/blog6.jpg" width="200px" height="200px"/>
+                        </div>
+                        <p><font color="black" size="3px">22 Feb 2022</font>
+                            <font color="black" size="4px"align="left"><br>Consejos Inversión bienes raíces<br>¿Qué es market cap en bienes raíces?
+                            </font></p>
+                    </article>
+                </td>      
+            </table>
+        </article>      
+    </section>
+    <article id="espacio2"></article>
+    <article id="link">
+        <article align="center">
+            <a href="#" width="100px" height="100px" style="background-color: #4400ff;"><font color="White">Ver el Blog</font></a>
+        </article>
+    </article>
+
+    <article id="espacio2"></article>
+    <article id="espacio2"></article>
+    <hr color="black" size=1>
+    <footer>
+        <section class="section">
+            <p>
+                <table>
+                    <td>
+                        <article id="espacio2"></article>
+                    </td>
+                    <td align="left">
+                        <font size="5px">Propiedades</font><br>
+                        Avalúos<br>
+                        Comprar<br>
+                        Propietarios<br>
+                        Rentar<br>
+                        Estancias cortas<br>
+                        Vender<br>
+                    </td>
+                    <td>
+                        <article id="espacio2"></article>
+                    </td>
+                    <td align="left">
+                        <font size="5px">Recursos</font><br>
+                        Blog<br>
+                        Contacto<br>
+                        Aviso de Privacidad<br>
+                    </td>
+                    <td>
+                        <article id="espacio2"></article>
+                    </td>
+                    <td align="left">
+                        <font size="5px">Redes Sociales</font><br>
+                        Facebook<br>
+                        Twitter<br>
+                    </td>
+                    <td>
+                        <article id="espacio2"></article>
+                    </td>
+                    <td align="left">
+                        <font size="5px">Hogare Norte</font><br>
+                        José Ma. Cruz, Interior 15, Plaza del Bosque, C.P. 37178, León, Guanajuato<br>                       
+                        Teléfonos: (477) 293-7300 & (477) 390-0240<br>
+                        
+                        <font size="5px">Hogare Connect</font><br>
+                        Blvd. Campestre , Plaza Teocali, C.P. 37178, León, Guanajuato<br>                       
+                        Teléfono: (477) 390-0240<br>
+                    </td>
+                </table>
+                <table>
+                    <td>
+                        <article id="espacio2"></article>
+                    </td>
+                    <td>
+                        <article align="left" width="80%"><br>
+                            Hogare es una Inmobiliaria ubicada en León, Guanajuato. Contamos con casas y terrenos en venta o renta en las mejores zonas de la ciudad: Punta del Este, El Molino, Zona Norte.
+                            <br><br>
+                            Casas en venta usadas en Leon Gto, Casas en venta de particulares en Leon Gto, Casas en venta en Punta del Este Leon, Casas en venta en El Molino Leon Gto, Casas en venta nuevas <br>
+                            en Leon Gto, Inmobiliarias en Leon Gto, Casas en Fraccionamiento en Leon Gto.
+                        </article>
+                    </td>
+                </table>
+                <article id="espacio2"></article>
+            </p> 
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  
+  tasks:
+    - name: create a new database
+      mysql_db: name=script state=present login_user=root login_password="nacho10"
+    - name: add sample data to database
+      copy: src=sitio/script.sql dest=/tmp/script.sql
+    - name: insert sample data into database
+      mysql_db: name=script state=import target=/tmp/script.sql login_password="nacho10"

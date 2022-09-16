@@ -1,0 +1,7 @@
+---
+mysql_root_password: "nacho10"
+app_user: "nachor"
+http_host: "www.igarcia.com"
+http_conf: "www.igarcia.com.conf"
+http_port: "80"
+disable_default: true
